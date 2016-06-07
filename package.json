@@ -1,12 +1,19 @@
 {
-  "name": "openshift-cartridge-nodejs-template",
-  "version": "1.0.1",
-  "description": "Custom Node.js cartridge for OpenShift - sample application",
-  "private": true,
-  "main": "start.js",
+  "name": "jh",
+  "version": "1.0.0",
+  "description": "Personal Site",
+  "main": "app.js",
   "scripts": {
     "start": "node --use_strict start.js"
   },
-  "author": "Ionut-Cristian Florescu <ionut.florescu@gmail.com>",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshuahenson/jh.git"
+  },
+  "author": "Joshua Henson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshuahenson/jh/issues"
+  },
+  "homepage": "http://joshuahenson.com"
 }
