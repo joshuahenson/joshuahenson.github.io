@@ -4,7 +4,8 @@
   "description": "Personal Site",
   "main": "app.js",
   "scripts": {
-    "start": "node --use_strict start.js"
+    "start": "node --use_strict start.js",
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/joshuahenson/jh/issues"
   },
-  "homepage": "http://joshuahenson.com"
+  "homepage": "http://joshuahenson.com",
+  "dependencies": {
+    "autoprefixer": "^6.3.6",
+    "express": "^4.13.4",
+    "node-sass-middleware": "^0.9.8",
+    "postcss-middleware": "^1.1.2"
+  }
 }
