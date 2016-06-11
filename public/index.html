@@ -1,4 +1,102 @@
-<!DOCTYPE html>
-<html>
-	This is not a test.
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Joshua Henson - Web Developer</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="http://res.cloudinary.com/henson/image/upload/v1465444473/favicon_me5tr9.png">
+  <link href='https://fonts.googleapis.com/css?family=Asap|Flamenco' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+  <!-- Add your site or application content here -->
+  <header id="header" class="full"><a id="aHeader" href="#header" class="name">Joshua Henson</a><span id="tag" class="show">Web Developer</span>
+    <nav id="nav" class="top"><span id="mobileLink"></span>
+      <ul>
+        <li class="order2"><a id="aPortfolio" href="#portfolio">Portfolio</a></li>
+        <li class="order1"><a id="aAbout" href="#about">About</a></li>
+        <li class="order3"><a id="aContact" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <article id="portfolio" class="full order2">
+    <div class="container">
+      <h3>React</h3>
+      <div class="row">
+        <div class="column">
+          <a href="http://joshuahenson.github.io/recipeBox/" target="_blank"><img src="http://res.cloudinary.com/henson/image/upload/v1465402067/recipebox_j49qgl.png" />
+            <p>An online recipe box using localStorage.</p>
+          </a>
+        </div>
+        <div class="column">
+          <a href="http://joshuahenson.github.io/dungeonCrawler/" target="_blank"><img src="http://res.cloudinary.com/henson/image/upload/v1465401941/rogue_vpwtdz.png" />
+            <p>My take on the original <i>Rogue</i> video game.</p>
+          </a>
+        </div>
+      </div>
+      <hr>
+      <h3>D3</h3>
+      <div class="row">
+        <div class="column">
+          <a href="" target="_blank"><img src="http://res.cloudinary.com/henson/image/upload/v1465401951/meteorite_qacuyk.png" />
+            <p>GeoJSON map showing meteor falls across the globe.</p>
+          </a>
+        </div>
+        <div class="column">
+          <a href="" target="_blank"><img src="http://res.cloudinary.com/henson/image/upload/v1465401957/heatmap_pseelz.png" />
+            <p>Heatmap showing average temperatures.</p>
+          </a>
+        </div>
+      </div>
+      <hr>
+      <h3>jQuery</h3>
+      <div class="row">
+        <div class="column">
+          <a href="http://codepen.io/joshuahenson/full/jWWZqW/" target="_blank"><img src="http://res.cloudinary.com/henson/image/upload/v1453791591/simon_meuk3o.png" />
+            <p>Version of the classic game <i>Simon</i> with randomized patterns.</p>
+          </a>
+        </div>
+        <div class="column">
+          <a href="http://codepen.io/joshuahenson/full/LGpVaP/" target="_blank"><img src="http://res.cloudinary.com/henson/image/upload/v1453791591/tic_vck2mm.png" />
+            <p>Tic-tac-toe game in which the AI opponent analyzes all possible moves to make a decision.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article id="about" class="full order1">
+    <div class="well">
+      <p>I hate talking about myself.</p>
+    </div>
+  </article>
+  <footer id="contact" class="full order3">
+    <div class="copy">&copy; 2016 Joshua Henson </div>
+    <form action="">
+      <fieldset>
+        <legend>Contact</legend>
+        <div class="field-container">
+          <input type="text" placeholder="Name" name="name" required />
+          <input type="email" placeholder="Email" name="email" required />
+          <input type="text" placeholder="Subject" name="subject" />
+          <input type="text" name="honey" class="honey" />
+        </div>
+        <div class="field-container rfc">
+          <textarea name="message" placeholder="Message" rows="5" required></textarea>
+          <button type="submit">Send</button>
+        </div>
+      </fieldset>
+    </form>
+  </footer>
+
+  <script src="js/index.js"></script>
+</body>
+
 </html>
