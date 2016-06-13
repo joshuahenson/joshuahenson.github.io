@@ -1,0 +1,214 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Asap', sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  text-align: center;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba($light, 0), rgba($light, 0.75), rgba($light, 0));
+}
+
+#header {
+  padding: 0;
+}
+
+#about {
+  background: $color1;
+  color: $color3;
+  padding: 1% 3%;
+}
+
+.order1 {
+  order: 1;
+}
+
+.order2 {
+  order: 2;
+}
+
+.order3 {
+  order: 3;
+}
+
+#portfolio {
+  background: $color2;
+  padding-bottom: 0;
+}
+
+#contact {
+  background: $color3;
+  position: relative;
+}
+
+.full {
+  padding: 45px 10px 0 10px;
+  background-color: $color1;
+  color: $light;
+  padding: 45px 10px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+nav {
+  transition-duration: 0.2s;
+  transition-property: background-color;
+  background-color: rgba(64, 66, 87, 0.9);
+  min-height: 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  ul {
+    padding-top: 15px;
+    display: none;
+    &.show {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  #mobileLink::after {
+    position: absolute;
+    right: 0.25em;
+    top: 0;
+    content: "\2261";
+    font-size: 1.8em;
+  }
+  li {
+    transition-duration: 0.5s;
+    transition-property: margin, border, padding;
+    text-align: center;
+    list-style: none;
+    margin: 10px;
+  }
+}
+
+.name {
+  position: fixed;
+  top: 4px;
+  left: 10px;
+  font-family: 'Flamenco', cursive;
+  font-size: 30px;
+  color: white;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  z-index: 200;
+}
+
+#tag {
+  opacity: 0;
+  position: fixed;
+  top: 35px;
+  left: 60px;
+  transition: 0.5s;
+  color: white;
+  z-index: 200;
+}
+
+.visible {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+a {
+  text-decoration: none;
+  color: $light;
+}
+
+form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  color: $light; //IE not inheriting
+  font-size: 24px;
+  padding: 0 10px 10px 0;
+  text-align: right;
+}
+
+form button {
+  margin: 10px 0;
+  background-color: transparent;
+  padding: 10px;
+  width: 150px;
+  color: $light;
+  border: 1px solid $light;
+  &:hover {
+    background-color: rgba(235, 242, 250, 0.1);
+    cursor: pointer;
+  }
+}
+
+input,
+textarea {
+  border: none;
+  width: 100%;
+  margin: 5px 0;
+  padding: 5px;
+  outline: none;
+  background-color: $light;
+  &:focus {
+    box-shadow: inset 0 0 5px rgba(64, 66, 87, 0.9);
+  }
+  &::placeholder {
+    color: rgba(4, 42, 77, 0.5);
+  }
+}
+
+.honey {
+  display: none;
+}
+
+.copy {
+  position: absolute;
+  bottom: 0;
+  font-size: 10px;
+  text-align: center;
+  color: gray;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.column {
+  display: block;
+  text-align: center;
+  padding-bottom: 30px;
+  a p {
+    margin: 0;
+  }
+}
+
+.github {
+  fill: $light;
+  position: fixed;
+  bottom: 0;
+  right: 5px;
+  fill: #ebf2fa;
+}
