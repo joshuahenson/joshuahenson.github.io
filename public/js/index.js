@@ -1,5 +1,6 @@
 var tag = document.getElementById('tag');
 var nav = document.getElementById('nav');
+var contactForm = document.getElementById('contactForm');
 var ul = document.querySelector('.full nav ul');
 var imgs = document.querySelectorAll('img');
 var i, full, resizeTimer;
@@ -163,6 +164,10 @@ document.getElementById('mobileLink').addEventListener('click', function() {
 }, false);
 
 window.addEventListener('scroll', headerScroll, false);
+
+contactForm.addEventListener('click', function() {
+  this.classList.add('submit');
+}, false);
 
 // Wait until resize is complete before adjusting sizes;
 var reSize = function() {

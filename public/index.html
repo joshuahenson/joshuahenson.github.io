@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Joshua Henson - Web Developer</title>
-  <meta name="description" content="">
+  <meta name="description" content="Joshua Henson - Web Developer">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="http://res.cloudinary.com/henson/image/upload/v1465444473/favicon_me5tr9.png">
   <link href='https://fonts.googleapis.com/css?family=Asap|Flamenco' rel='stylesheet' type='text/css'>
@@ -18,12 +18,12 @@
         <![endif]-->
 
   <!-- Add your site or application content here -->
-  <header id="header" class="full"><a id="aHeader" href="#header" class="name">Joshua Henson</a><span id="tag" class="show">Web Developer</span>
+  <header id="web-dev" class="full"><a href="#web-dev" class="name">Joshua Henson</a><span id="tag" class="show">Web Developer</span>
     <nav id="nav" class="top"><span id="mobileLink"></span>
       <ul>
-        <li class="order2"><a id="aPortfolio" href="#portfolio">Portfolio</a></li>
-        <li class="order1"><a id="aAbout" href="#about">About</a></li>
-        <li class="order3"><a id="aContact" href="#contact">Contact</a></li>
+        <li class="order2"><a href="#portfolio">Portfolio</a></li>
+        <li class="order1"><a href="#about">About</a></li>
+        <li class="order3"><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -74,26 +74,33 @@
   </article>
   <article id="about" class="full order1">
     <div class="well">
-      <p>I hate talking about myself.</p>
+      <p>I am a former photographer and national park ranger turned web developer.
+        Some of the things I enjoy doing when I am not working on improving my coding skills include
+         hiking, kayaking, and comic books.</p>
     </div>
   </article>
   <footer id="contact" class="full order3">
-    <div class="copy">&copy; 2016 Joshua Henson </div>
-    <form action="">
+    <form id="contactForm" action="/contact" method="post">
       <fieldset>
         <legend>Contact</legend>
         <div class="field-container">
           <input type="text" placeholder="Name" name="name" required />
           <input type="email" placeholder="Email" name="email" required />
           <input type="text" placeholder="Subject" name="subject" />
-          <input type="text" name="honey" class="honey" />
+          <input type="text" placeholder="Company" name="company" class="honey" />
         </div>
         <div class="field-container rfc">
           <textarea name="message" placeholder="Message" rows="5" required></textarea>
-          <button type="submit">Send</button>
+          <button id="formSubmit" type="submit">Send</button>
         </div>
       </fieldset>
     </form>
+    <div class="copy">&copy; 2016 Joshua Henson </div>
+    <a class="github" href="https://github.com/joshuahenson" target="_Blank">
+      <svg height="16"  width="16" viewBox="0 0 16 16">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59 0.4 0.07 0.55-0.17 0.55-0.38 0-0.19-0.01-0.82-0.01-1.49-2.01 0.37-2.53-0.49-2.69-0.94-0.09-0.23-0.48-0.94-0.82-1.13-0.28-0.15-0.68-0.52-0.01-0.53 0.63-0.01 1.08 0.58 1.23 0.82 0.72 1.21 1.87 0.87 2.33 0.66 0.07-0.52 0.28-0.87 0.51-1.07-1.78-0.2-3.64-0.89-3.64-3.95 0-0.87 0.31-1.59 0.82-2.15-0.08-0.2-0.36-1.02 0.08-2.12 0 0 0.67-0.21 2.2 0.82 0.64-0.18 1.32-0.27 2-0.27 0.68 0 1.36 0.09 2 0.27 1.53-1.04 2.2-0.82 2.2-0.82 0.44 1.1 0.16 1.92 0.08 2.12 0.51 0.56 0.82 1.27 0.82 2.15 0 3.07-1.87 3.75-3.65 3.95 0.29 0.25 0.54 0.73 0.54 1.48 0 1.07-0.01 1.93-0.01 2.2 0 0.21 0.15 0.46 0.55 0.38C13.71 14.53 16 11.53 16 8 16 3.58 12.42 0 8 0z"></path>
+      </svg>
+    </a>
   </footer>
 
   <script src="js/index.js"></script>

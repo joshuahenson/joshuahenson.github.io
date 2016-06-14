@@ -83,7 +83,7 @@
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
-    color: $color3; //TODO change this
+    color: $color3;
   }
   .field-container {
     display: inline-block;
@@ -94,9 +94,6 @@
       width: 60%;
       text-align: right;
     }
-  }
-  :required:focus {
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
   }
   input {
     display: block;

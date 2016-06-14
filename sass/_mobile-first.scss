@@ -64,6 +64,11 @@ hr {
   padding: 45px 10px;
 }
 
+.contact-response {
+  padding-top: 100px;
+  text-align: center;
+}
+
 .container {
   width: 80%;
   margin: 0 auto;
@@ -172,11 +177,16 @@ textarea {
   outline: none;
   background-color: $light;
   &:focus {
-    box-shadow: inset 0 0 5px rgba(64, 66, 87, 0.9);
+    box-shadow: 0 0 5px rgba($light, 0.8);
   }
   &::placeholder {
     color: rgba(4, 42, 77, 0.5);
   }
+}
+
+.submit input:invalid,
+.submit textarea:invalid {
+  box-shadow: 0 0 0 5px red;
 }
 
 .honey {
