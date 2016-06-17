@@ -1,12 +1,12 @@
-var express = require('express');
-var router = express.Router();
-var bodyParser = require('body-parser');
-var urlEncodedParser = bodyParser.urlencoded({ extended: false });
-var contact = require('../controllers/contact.js');
+const express = require('express');
+const router = express.Router(); // eslint-disable-line
+const bodyParser = require('body-parser');
+const urlEncodedParser = bodyParser.urlencoded({ extended: false });
+const contact = require('../controllers/contact.js');
 
 router.post('/contact', urlEncodedParser, contact);
 
-router.use(function (req, res) {
+router.use((req, res) => {
   res.redirect('/');
 });
 
