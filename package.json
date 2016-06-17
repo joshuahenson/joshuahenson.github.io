@@ -5,10 +5,14 @@
   "main": "app.js",
   "scripts": {
     "start": "node start.js",
-    "dev": "nodemon app.js",
     "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack",
-    "clean": "rimraf public/js"
+    "clean": "rimraf public/js",
+    "build:sass": "node-sass --include-path scss sass/style.scss public/css/style.css",
+    "build:css": "postcss --use autoprefixer -b 'last 2 versions' < public/css/style.css | postcss --use cssnano > public/css/style.min.css",
+    "watch:sass": "nodemon -e scss -x \"npm run build:sass\"",
+    "watch:server": "nodemon app.js",
+    "dev": "npm run watch:server & npm run watch:sass"
   },
   "repository": {
     "type": "git",
