@@ -1,4 +1,4 @@
-import 'smoothscroll';
+import './smoothScroll';
 
 var tag = document.getElementById('tag');
 var nav = document.getElementById('nav');
