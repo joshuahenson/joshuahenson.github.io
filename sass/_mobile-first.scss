@@ -58,15 +58,10 @@ hr {
 }
 
 .full {
-  padding: 45px 10px 0 10px;
+  padding: 45px 10px 0;
   background-color: $color1;
   color: $light;
   padding: 45px 10px;
-}
-
-.contact-response {
-  padding-top: 100px;
-  text-align: center;
 }
 
 .container {
@@ -142,6 +137,7 @@ a {
 form {
   width: 80%;
   margin: 0 auto;
+  text-align: right;
 }
 
 fieldset {
@@ -152,7 +148,6 @@ legend {
   color: $light; //IE not inheriting
   font-size: 24px;
   padding: 0 10px 10px 0;
-  text-align: right;
 }
 
 form button {
@@ -168,25 +163,48 @@ form button {
   }
 }
 
+.label-container {
+  position: relative;
+}
+
 input,
 textarea {
   border: none;
   width: 100%;
+  padding: 22px 8px 10px;
   margin: 5px 0;
-  padding: 5px;
   outline: none;
   background-color: $light;
+  font-size: 16px;
+  color: #212121;
+  transition: all 0.2s ease-in-out;
+
   &:focus {
     box-shadow: 0 0 5px rgba($light, 0.8);
-  }
-  &::placeholder {
-    color: rgba(4, 42, 77, 0.5);
   }
 }
 
 .submit input:invalid,
 .submit textarea:invalid {
   box-shadow: 0 0 0 5px red;
+}
+
+label {
+  position: absolute;
+  top: 20px;
+  left: 8px;
+  color: #909090;
+  transition: all 0.2s ease-in-out;
+}
+
+input,
+textarea {
+  &:valid + label,
+  &:focus + label {
+    color: $color2;
+    font-size: 12px;
+    top: 10px;
+  }
 }
 
 .honey {

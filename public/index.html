@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -13,11 +13,6 @@
 </head>
 
 <body>
-  <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-  <!-- Add your site or application content here -->
   <header id="web-dev" class="full"><a href="#web-dev" class="name">Joshua Henson</a><span id="tag" class="show">Web Developer</span>
     <nav id="nav" class="top"><span id="mobileLink"></span>
       <ul>
@@ -75,7 +70,7 @@
   <article id="about" class="full order1">
     <div class="well">
       <p>I am a former photographer and national park ranger turned web developer.
-        Some of the things I enjoy doing when I am not working on improving my coding skills include
+        Some of the things I enjoy when I am not working on improving my coding skills include
          hiking, kayaking, and comic books.</p>
     </div>
   </article>
@@ -83,16 +78,21 @@
     <form id="contactForm" action="/contact" method="post">
       <fieldset>
         <legend>Contact</legend>
-        <div class="field-container">
-          <input type="text" placeholder="Name" name="name" required />
-          <input type="email" placeholder="Email" name="email" required />
-          <input type="text" placeholder="Subject" name="subject" />
-          <input type="text" placeholder="Company" name="company" class="honey" />
+        <div class="label-container inline-lg half-lg">
+          <input type="text" name="name" required />
+          <label for="name">Name</label>
         </div>
-        <div class="field-container rfc">
-          <textarea name="message" placeholder="Message" rows="5" required></textarea>
-          <button id="formSubmit" type="submit">Send</button>
+        <div class="label-container inline-lg half-lg">
+          <!-- type="text" for float label -->
+          <input type="text" name="email" required />
+          <label for="email">Email</label>
         </div>
+        <input type="text" name="company" class="honey" />
+        <div class="label-container">
+          <textarea name="message" rows="5" required></textarea>
+          <label for="message">Message</label>
+        </div>
+        <button id="formSubmit" type="submit">Send</button>
       </fieldset>
     </form>
     <div class="copy">&copy; 2016 Joshua Henson </div>
