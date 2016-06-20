@@ -71,9 +71,17 @@
     };
     step();
   };
+  // jh
+  var ul = document.querySelector('.full nav ul');
+  var closeMobileMenu = function () {
+    if (ul.className === 'show') {
+      ul.classList.remove('show');
+    }
+  }
 
   var linkHandler = function (ev) {
     ev.preventDefault();
+    closeMobileMenu(); // jh
 
     if (location.hash !== this.hash) window.history.pushState(null, null, this.hash);
     // using the history api to solve issue #1 - back doesn't work

@@ -8,12 +8,6 @@ var ul = document.querySelector('.full nav ul');
 var imgs = document.querySelectorAll('img');
 var i, full, resizeTimer;
 
-function closeMobileMenu() {
-  if (ul.className === 'show') {
-    ul.classList.remove('show');
-  }
-}
-
 var setSizes = function () {
   full = window.innerHeight;
   var imgHeight = String(window.innerHeight * 0.8);
