@@ -18,7 +18,6 @@ module.exports = {
   ],
   module: {
     loaders: [
-    // js
       {
         test: /\.js$/,
         loaders: ['babel'],
@@ -27,4 +26,3 @@ module.exports = {
     ]
   }
 };
-console.log(path.join(__dirname, 'public/js'));

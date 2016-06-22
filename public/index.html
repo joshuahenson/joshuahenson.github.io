@@ -79,19 +79,20 @@
       <fieldset>
         <legend>Contact</legend>
         <div class="label-container inline-lg half-lg">
-          <input type="text" name="name" required />
+          <input type="text" name="name" id="name" required />
           <label for="name">Name</label>
         </div>
         <div class="label-container inline-lg half-lg">
           <!-- type="text" for float label -->
-          <input type="text" name="email" required />
+          <input type="text" name="email" id="email" required />
           <label for="email">Email</label>
         </div>
         <input type="text" name="company" class="honey" />
         <div class="label-container">
-          <textarea name="message" rows="5" required></textarea>
+          <textarea name="message" rows="5" id="message" required></textarea>
           <label for="message">Message</label>
         </div>
+        <p id="formStatus"></p>
         <button id="formSubmit" type="submit">Send</button>
       </fieldset>
     </form>

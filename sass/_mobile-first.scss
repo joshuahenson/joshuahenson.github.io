@@ -184,11 +184,6 @@ textarea {
   }
 }
 
-.submit input:invalid,
-.submit textarea:invalid {
-  box-shadow: 0 0 0 5px red;
-}
-
 label {
   position: absolute;
   top: 20px;

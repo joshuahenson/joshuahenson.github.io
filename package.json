@@ -11,8 +11,7 @@
     "build:sass": "node-sass --include-path scss sass/style.scss public/css/style.css",
     "build:css": "postcss --use autoprefixer -b 'last 2 versions' < public/css/style.css | postcss --use cssnano > public/css/style.min.css",
     "watch:sass": "nodemon -e scss -x \"npm run build:sass\"",
-    "watch:server": "nodemon app.js",
-    "dev": "npm run watch:server & npm run watch:sass"
+    "dev": "node app.js"
   },
   "repository": {
     "type": "git",
