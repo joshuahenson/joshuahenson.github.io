@@ -161,6 +161,10 @@ form button {
     background-color: rgba(235, 242, 250, 0.1);
     cursor: pointer;
   }
+  &:disabled {
+    background-color: rgba(235, 242, 250, 0.1);
+    cursor: not-allowed;
+  }
 }
 
 .label-container {

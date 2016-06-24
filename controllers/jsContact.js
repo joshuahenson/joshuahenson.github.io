@@ -1,5 +1,4 @@
 const nodemailer = require('nodemailer');
-const path = require('path');
 require('dotenv').config();
 
 function contact(req, res) {
@@ -23,9 +22,9 @@ function contact(req, res) {
 
   smtpTrans.sendMail(mailOpts, (error) => {
     if (error) {
-      res.sendFile(path.join(__dirname, '../public/contact_error.html'));
+      res.sendStatus(500);
     } else {
-      res.sendFile(path.join(__dirname, '../public/contact_success.html'));
+      res.sendStatus(200);
     }
   });
 }
