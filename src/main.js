@@ -5,23 +5,24 @@ import validateForm, { validateName, validateEmail, validateMessage } from './va
 const formSubmit = document.getElementById('formSubmit');
 const contactForm = document.getElementById('contactForm');
 const formStatus = document.getElementById('formStatus');
-var tag = document.getElementById('tag');
-var nav = document.getElementById('nav');
-var ul = document.querySelector('.full nav ul');
-var imgs = document.querySelectorAll('img');
-var i, full, resizeTimer;
+const tag = document.getElementById('tag');
+const nav = document.getElementById('nav');
+const ul = document.querySelector('.full nav ul');
+const imgs = document.querySelectorAll('img');
+let full;
+let resizeTimer;
 
-var setSizes = function () {
+const setSizes = function () {
   full = window.innerHeight;
-  var imgHeight = String(window.innerHeight * 0.8);
-  for (i = 0; i < imgs.length; i++) {
-    imgs[i].style.maxHeight = imgHeight + 'px';
+  const imgHeight = String(window.innerHeight * 0.8);
+  for (let i = 0; i < imgs.length; i++) {
+    imgs[i].style.maxHeight = `${imgHeight}px`;
   }
   ul.classList.remove('show');// fix resize above breakpoint
 };
 setSizes();
 
-var headerScroll = function () {
+const headerScroll = function () {
   if (window.innerWidth >= 768) {
     if (window.pageYOffset < full * 0.40 && nav.className !== 'top') {
       nav.classList.add('top');
@@ -33,7 +34,7 @@ var headerScroll = function () {
   }
 };
 
-document.getElementById('mobileLink').addEventListener('click', function () {
+document.getElementById('mobileLink').addEventListener('click', () => {
   ul.classList.toggle('show');
 }, false);
 
@@ -77,9 +78,9 @@ formSubmit.addEventListener('click', (e) => {
 }, false);
 
 // Wait until resize is complete before adjusting sizes;
-var reSize = function () {
+const reSize = function () {
   clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(function () {
+  resizeTimer = setTimeout(() => {
     setSizes();
   }, 500);
 };
