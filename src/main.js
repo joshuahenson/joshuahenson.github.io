@@ -8,21 +8,9 @@ const formStatus = document.getElementById('formStatus');
 const tag = document.getElementById('tag');
 const nav = document.getElementById('nav');
 const ul = document.querySelector('.full nav ul');
-const imgs = document.querySelectorAll('img');
-let full;
-let resizeTimer;
-
-const setSizes = function () {
-  full = window.innerHeight;
-  const imgHeight = String(window.innerHeight * 0.8);
-  for (let i = 0; i < imgs.length; i++) {
-    imgs[i].style.maxHeight = `${imgHeight}px`;
-  }
-  ul.classList.remove('show');// fix resize above breakpoint
-};
-setSizes();
 
 const headerScroll = function () {
+  const full = window.innerHeight;
   if (window.innerWidth >= 768) {
     if (window.pageYOffset < full * 0.40 && nav.className !== 'top') {
       nav.classList.add('top');
@@ -76,15 +64,6 @@ formSubmit.addEventListener('click', (e) => {
     formStatus.innerHTML = 'Please correct the errors shown above.';
   }
 }, false);
-
-// Wait until resize is complete before adjusting sizes;
-const reSize = function () {
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(() => {
-    setSizes();
-  }, 500);
-};
-window.addEventListener('resize', reSize);
 
 if (module.hot) {
   module.hot.accept();
