@@ -21,6 +21,7 @@ const headerScroll = function () {
     }
   }
 };
+headerScroll(); // Insure nav is shown when loading url with anchor
 
 document.getElementById('mobileLink').addEventListener('click', () => {
   ul.classList.toggle('show');
