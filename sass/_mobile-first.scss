@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: 'Asap', sans-serif;
+  font-family: Verdana, Geneva, sans-serif;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -25,14 +25,14 @@ hr {
   background-image: linear-gradient(to right, rgba($light, 0), rgba($light, 0.75), rgba($light, 0));
 }
 
-#header {
+#web-dev {
   padding: 0;
 }
 
 #about {
   background: $color1;
   color: $color3;
-  padding: 1% 3%;
+  padding: 45px 10px 0 10px;
 }
 
 .order1 {
@@ -58,7 +58,6 @@ hr {
 }
 
 .full {
-  padding: 45px 10px 0;
   background-color: $color1;
   color: $light;
   padding: 45px 10px;
@@ -107,7 +106,7 @@ nav {
   position: fixed;
   top: 4px;
   left: 10px;
-  font-family: 'Flamenco', cursive;
+  font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 30px;
   color: white;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
