@@ -42,27 +42,31 @@ contactForm.message.addEventListener('blur', () => {
 }, false);
 
 formSubmit.addEventListener('click', (e) => {
-  e.preventDefault();
-  if (validateForm(contactForm.name, contactForm.email, contactForm.message)) {
-    formSubmit.innerHTML = 'Sending...';
-    formStatus.innerHTML = null;
-    formSubmit.disabled = true;
-    axios.post('/jsContact', {
-      company: contactForm.company.value,
-      name: contactForm.name.value,
-      email: contactForm.email.value,
-      message: contactForm.message.value
-    })
-    .then(() => {
-      formSubmit.innerHTML = 'Message Sent';
-      contactForm.reset();
-    })
-    .catch(() => {
-      formSubmit.innerHTML = 'Fail';
-      formStatus.innerHTML = 'It appears that something has gone terribly wrong. Please email me at error@joshuahenson.com'; // eslint-disable-line
-    });
-  } else {
-    formStatus.innerHTML = 'Please correct the errors shown above.';
+  if (typeof Promise !== 'undefined') {
+    // Not bothering to polyfill Promise for the edge cases.
+    // Fall back to old school form submission as if no js.
+    e.preventDefault();
+    if (validateForm(contactForm.name, contactForm.email, contactForm.message)) {
+      formSubmit.innerHTML = 'Sending...';
+      formStatus.innerHTML = null;
+      formSubmit.disabled = true;
+      axios.post('/jsContact', {
+        company: contactForm.company.value,
+        name: contactForm.name.value,
+        email: contactForm.email.value,
+        message: contactForm.message.value
+      })
+      .then(() => {
+        formSubmit.innerHTML = 'Message Sent';
+        contactForm.reset();
+      })
+      .catch(() => {
+        formSubmit.innerHTML = 'Fail';
+        formStatus.innerHTML = 'It appears that something has gone terribly wrong. Please email me at error@joshuahenson.com'; // eslint-disable-line
+      });
+    } else {
+      formStatus.innerHTML = 'Please correct the errors shown above.';
+    }
   }
 }, false);
 
