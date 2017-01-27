@@ -1,5 +1,6 @@
 import './smoothScroll';
 import axios from 'axios';
+import throttle from 'lodash.throttle';
 import validateForm, { validateName, validateEmail, validateMessage } from './validateForm';
 
 const formSubmit = document.getElementById('formSubmit');
@@ -27,7 +28,7 @@ document.getElementById('mobileLink').addEventListener('click', () => {
   ul.classList.toggle('show');
 }, false);
 
-window.addEventListener('scroll', headerScroll, false);
+window.addEventListener('scroll', throttle(headerScroll, 100), false);
 
 contactForm.name.addEventListener('blur', () => {
   validateName(contactForm.name);
