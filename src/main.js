@@ -1,11 +1,12 @@
 import './smoothScroll';
 import axios from 'axios';
 import throttle from 'lodash.throttle';
-import validateForm, { validateName, validateEmail, validateMessage } from './validateForm';
+import validateForm, { validateInput } from './validateForm';
 
 const formSubmit = document.getElementById('formSubmit');
 const contactForm = document.getElementById('contactForm');
 const formStatus = document.getElementById('formStatus');
+const formFields = document.querySelectorAll('.formField');
 const tag = document.getElementById('tag');
 const nav = document.getElementById('nav');
 const ul = document.querySelector('.full nav ul');
@@ -30,17 +31,7 @@ document.getElementById('mobileLink').addEventListener('click', () => {
 
 window.addEventListener('scroll', throttle(headerScroll, 100), false);
 
-contactForm.name.addEventListener('blur', () => {
-  validateName(contactForm.name);
-}, false);
-
-contactForm.email.addEventListener('blur', () => {
-  validateEmail(contactForm.email);
-}, false);
-
-contactForm.message.addEventListener('blur', () => {
-  validateMessage(contactForm.message);
-}, false);
+formFields.forEach((formField) => formField.addEventListener('blur', validateInput, false));
 
 formSubmit.addEventListener('click', (e) => {
   if (typeof Promise !== 'undefined') {

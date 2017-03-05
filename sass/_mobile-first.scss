@@ -182,7 +182,8 @@ textarea {
   outline: none;
   background-color: $light;
   font-size: 16px;
-  color: #212121;
+  // color: #212121;
+  color: $color2;
   transition: all 0.2s ease-in-out;
 
   &:focus {
@@ -202,9 +203,17 @@ input,
 textarea {
   &:valid + label,
   &:focus + label {
-    color: $color2;
     font-size: 12px;
     top: 10px;
+  }
+}
+
+.error {
+  & label {
+    color: red;
+  }
+  & input, textarea {
+    box-shadow: 0 0 0 3px red;
   }
 }
 
