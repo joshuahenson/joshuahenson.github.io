@@ -3,7 +3,6 @@
     display: block;
   }
   .full {
-    //min-height: 100vh;
     @include viewport-unit(min-height, 100vh);
     position: relative;
   }
@@ -28,7 +27,6 @@
       background-color: transparent;
       border: none;
       li {
-        // border: 1px solid $dark;
         border: 1px solid transparent;
         margin: 10px;
         background-color: $light;
@@ -36,7 +34,6 @@
           background-color: $light1;
         }
         a {
-          // color: $dark;
           text-shadow: 0 1px rgba(0, 0, 0, 0.5);
         }
       }
@@ -87,7 +84,7 @@
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
-    color: $color2;
+    color: $dark;
   }
   .inline-lg {
     display: inline-block;
