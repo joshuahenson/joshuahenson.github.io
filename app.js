@@ -22,5 +22,5 @@ app.use(express.static('public'));
 app.use('/', routes);
 
 app.listen(port, ipaddress, () => {
-  console.log('Node app is running on port', port); // eslint-disable-line
+  console.log(`Node app is running on ${ipaddress}:${port}`);
 });
