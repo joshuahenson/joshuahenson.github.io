@@ -34,29 +34,32 @@ window.addEventListener('scroll', throttle(headerScroll, 100), false);
 formFields.forEach((formField) => formField.addEventListener('blur', validateInput, false));
 
 formSubmit.addEventListener('click', (e) => {
+  // Not bothering to polyfill Promise for the edge cases.
+  // Fall back to old school form submission as if no js.
   if (typeof Promise !== 'undefined') {
-    // Not bothering to polyfill Promise for the edge cases.
-    // Fall back to old school form submission as if no js.
     e.preventDefault();
     if (validateForm(contactForm.name, contactForm.email, contactForm.message)) {
       formSubmit.innerHTML = 'Sending...';
       formStatus.innerHTML = null;
+      formStatus.classList.remove('error');
       formSubmit.disabled = true;
-      axios.post('/jsContact', {
-        company: contactForm.company.value,
-        name: contactForm.name.value,
-        email: contactForm.email.value,
-        message: contactForm.message.value
-      })
+      axios.post('https://www.enformed.io/rhc5j9n7',
+        `Name=${encodeURIComponent(contactForm.name.value)}&Email=${encodeURIComponent(contactForm.email.value)}&Message=${encodeURIComponent(contactForm.message.value)}`
+        , {
+          headers: { "Content-Type": "application/x-www-form-urlencoded" }
+        })
         .then(() => {
-          formSubmit.innerHTML = 'Message Sent';
+          formSubmit.innerHTML = 'Send';
+          formSubmit.disabled = false;
+          formStatus.innerHTML = 'Thank you for contacting me!';
           contactForm.reset();
         })
         .catch(() => {
-          formSubmit.innerHTML = 'Fail';
-          formStatus.innerHTML = 'It appears that something has gone terribly wrong. Please email me at error@joshuahenson.com'; // eslint-disable-line
+          formSubmit.innerHTML = 'Error';
+          formStatus.innerHTML = 'It appears that something has gone terribly wrong. Please email me at error@joshuahenson.com';
         });
     } else {
+      formStatus.classList.add('error');
       formStatus.innerHTML = 'Please correct the errors shown above.';
     }
   }
