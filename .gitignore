@@ -1,4 +1,2 @@
-.z/
 node_modules/
-.env
-style.css
+.notes/
