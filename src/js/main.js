@@ -1,6 +1,6 @@
-import './smoothScroll';
 import axios from 'axios';
 import throttle from 'lodash.throttle';
+import './smoothScroll';
 import validateForm, { validateInput } from './validateForm';
 
 const formSubmit = document.getElementById('formSubmit');
@@ -11,7 +11,7 @@ const tag = document.getElementById('tag');
 const nav = document.getElementById('nav');
 const ul = document.querySelector('.full nav ul');
 
-const headerScroll = function () {
+const headerScroll = () => {
   const full = window.innerHeight;
   if (window.innerWidth >= 768) {
     if (window.pageYOffset < full * 0.40 && nav.className !== 'top') {
@@ -48,14 +48,14 @@ formSubmit.addEventListener('click', (e) => {
         email: contactForm.email.value,
         message: contactForm.message.value
       })
-      .then(() => {
-        formSubmit.innerHTML = 'Message Sent';
-        contactForm.reset();
-      })
-      .catch(() => {
-        formSubmit.innerHTML = 'Fail';
-        formStatus.innerHTML = 'It appears that something has gone terribly wrong. Please email me at error@joshuahenson.com'; // eslint-disable-line
-      });
+        .then(() => {
+          formSubmit.innerHTML = 'Message Sent';
+          contactForm.reset();
+        })
+        .catch(() => {
+          formSubmit.innerHTML = 'Fail';
+          formStatus.innerHTML = 'It appears that something has gone terribly wrong. Please email me at error@joshuahenson.com'; // eslint-disable-line
+        });
     } else {
       formStatus.innerHTML = 'Please correct the errors shown above.';
     }
