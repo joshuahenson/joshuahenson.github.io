@@ -61,7 +61,3 @@ formSubmit.addEventListener('click', (e) => {
     }
   }
 }, false);
-
-if (module.hot) {
-  module.hot.accept();
-}
