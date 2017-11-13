@@ -13,6 +13,7 @@ module.exports = {
       template: 'src/html/index.html',
       minify: {
         removeComments: true,
+        collapseWhitespace: true,
         removeRedundantAttributes: true,
         removeEmptyAttributes: true,
         keepClosingSlash: true,
