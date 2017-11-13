@@ -125,11 +125,6 @@ nav {
   cursor: default;
 }
 
-.visible {
-  opacity: 1;
-  transition: 0.5s;
-}
-
 a {
   text-decoration: none;
   color: $dark;
@@ -156,6 +151,9 @@ form {
     &:disabled {
       background-color: rgba(235, 242, 250, 0.1);
       cursor: not-allowed;
+    }
+    &::-moz-focus-inner {
+      border: 0;
     }
   }
 }
@@ -220,7 +218,7 @@ textarea {
   bottom: 0;
   font-size: 10px;
   text-align: center;
-  color: gray;
+  color: $light;
 }
 
 img {
