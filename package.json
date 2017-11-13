@@ -7,8 +7,10 @@
   "author": "Joshua Henson",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --config webpack.config.prod.js",
-    "dev": "webpack-dev-server --config webpack.config.dev.js --open"
+    "build": "npm run clean && npm run webpack",
+    "clean": "rimraf index.html && rimraf main.*.css && rimraf main.*.js",
+    "dev": "webpack-dev-server --config webpack.config.dev.js --open",
+    "webpack": "webpack --config webpack.config.prod.js"
   },
   "dependencies": {
     "axios": "^0.17.1",
@@ -19,7 +21,6 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
-    "clean-webpack-plugin": "^0.1.17",
     "css-loader": "^0.28.7",
     "eslint": "^4.11.0",
     "eslint-config-airbnb-base": "^12.1.0",
@@ -30,6 +31,7 @@
     "node-sass": "^4.6.1",
     "postcss-flexbugs-fixes": "^3.2.0",
     "postcss-loader": "^2.0.8",
+    "rimraf": "^2.6.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.0",
     "uglifyjs-webpack-plugin": "^1.0.1",

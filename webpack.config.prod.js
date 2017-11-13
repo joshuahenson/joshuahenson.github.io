@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const autoprefixer = require('autoprefixer');
@@ -9,7 +8,6 @@ const flexbugs = require('postcss-flexbugs-fixes');
 module.exports = {
   entry: './src/js/index.js',
   plugins: [
-    new CleanWebpackPlugin(['docs']),
     new HtmlWebpackPlugin({
       inject: true,
       template: 'src/html/index.html',
@@ -30,7 +28,7 @@ module.exports = {
   ],
   output: {
     filename: '[name].[chunkhash:8].js',
-    path: path.resolve(__dirname, 'docs')
+    path: path.resolve(__dirname, '')
   },
   module: {
     rules: [
