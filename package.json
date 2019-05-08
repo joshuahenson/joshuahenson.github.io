@@ -10,11 +10,14 @@
     "build": "npm run clean && npm run webpack",
     "clean": "rimraf index.html && rimraf main.*.css && rimraf main.*.js",
     "dev": "webpack-dev-server --config webpack.config.dev.js --open",
-    "webpack": "webpack --config webpack.config.prod.js"
+    "webpack": "webpack --config webpack.config.prod.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "axios": "^0.17.1",
-    "lodash.throttle": "^4.1.1"
+    "lodash.throttle": "^4.1.1",
+    "snyk": "^1.162.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.6",
@@ -37,5 +40,6 @@
     "uglifyjs-webpack-plugin": "^1.0.1",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.4"
-  }
+  },
+  "snyk": true
 }
